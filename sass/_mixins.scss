@@ -1,0 +1,13 @@
+@mixin flexbox{
+    display: flex;
+    align-items: center;
+}
+@mixin marginBottom{
+    margin-bottom: 15px;
+}
+//media queries
+@mixin break($width){
+    @media screen and (max-width:$width){
+        @content;
+    }
+}

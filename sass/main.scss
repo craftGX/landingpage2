@@ -1,0 +1,130 @@
+@import "sass/_variables.scss";
+@import "sass/_mixins.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+header{
+    width:100%;
+    height:20vh;
+    @include flexbox;
+    justify-content: space-around;
+    .logo{
+        @include flexbox;
+        i{
+            margin-right: 20px;
+            font-size: 35px;
+        }
+        .fa-rocket{
+            color:rgb(81, 81, 243);
+        }
+        .fa-house{
+            color:rgb(46, 46, 223);
+        }
+        .fa-youtube{
+            color:red;
+        }
+        .fa-book{
+            color:rgb(221, 45, 74);
+        }
+        .text p{
+            color:rgb(54, 52, 52);
+        }
+    }
+    @include break(1440px){
+        width: 100%;
+        justify-content: flex-start;
+        .logo{
+            flex-direction: column;
+            margin: 0 80px;
+        }
+    }
+    @include break(1024px){
+        width: 100%;
+        justify-content: flex-start;
+        .logo{
+            flex-direction: column;
+            margin: 0 52px;
+        }
+    }
+}
+section#principal{
+    width:100%;
+    height: 60vh;
+    background:$violet;
+    @include flexbox;
+    justify-content: space-around;
+    .droite{
+        width:50%;
+        position: relative;
+        left:100px;
+        color:white;
+        p{
+            @include marginBottom;
+        }
+        h1{
+            @include marginBottom;
+        }
+    }
+    .gauche{
+        width:50%;
+        .cadre{
+            left:-75px;
+            @include flexbox;
+            flex-direction: column;
+            justify-content: center;
+            width:420px;
+            height:200px;
+            background: rgb(223, 220, 220);
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 10px 10px 5px whitesmoke;
+        }
+    }
+    @include break(1440px){
+        width:100%;
+        height:45vh;
+        justify-content: center;
+        flex-direction: column;
+    }
+    @include break(1024px){
+        width:100%;
+        height:40vh;
+        justify-content: center;
+        .droite{
+            width:100%;
+            padding:0 150px;
+        }
+        .gauche{
+            width:100%;
+            padding:0 200px;
+        }
+    }
+}
+#middle{
+    margin:75px 5px;
+    @include flexbox;
+    justify-content: space-around;
+    img{
+        width:180px;
+        height: 130px;
+    }
+    @include break(1440px){
+        width: 100%;
+        justify-content: flex-start;
+        img{
+            margin:0 6px;
+        }
+    }
+    @include break(1024px){
+        width: 100%;
+        justify-content: flex-start;
+        img{
+            margin:0 10px;
+            width: 130px;
+            height: 80px;
+        }
+    }
+}
